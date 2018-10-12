@@ -1,0 +1,34 @@
+#part{display:block;
+	padding-left:2em;
+	padding-right:2em;
+	width: 60%;
+	text-align:justify;
+	float:left;
+	margin-right: 5%;
+}
+
+.actTitle {
+	border-top:none;
+	border-left:none;
+	border-right: none;
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    border-bottom: 5px double black;
+	padding:0;
+	margin-top:1em;
+	margin-bottom:1em;
+
+}
+
+
+[id~=act] {border-style:none;
+padding:0;
+}
+
+.sp div:nth-last-child(1) {
+    margin-bottom: 0.5em;
+    }
+
+.speaker{display:none
+}

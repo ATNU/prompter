@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" href="/favicon.ico?" />
+<link rel="stylesheet" href="http://prompter.jharrimansmith.net/styles.css">
+<title>The Cyborg Prompter</title>
+<style></style>
+</head>
+<body>
+<div id="wrapper">
+
+<div id="intro">
+	<p><img src="/letter-f.jpeg" id="dropcap"/>rom Shakespeare's time to Sheridan's, the prompter was an irreplaceable part of a professional theatre.</p> 
+	
+	<p>During a performance he used a bell and a whistle to direct entrances and exits, and to order scene changes. When necessary, he also fed actors their lines.</p> 
+	
+	<p>When a play was chosen for performance, one of the prompter's many tasks was to prepare 'parts' for all the actors to memorize. Each 'part' provided only the lines of the actor's character, with a few words from his or her cue. Creating parts by hand was a laborious task, and the finished products were jealously guarded by performers.</p>
+	
+	<p>This website allows you to take on the responsibility of a prompter, and create the parts for your actors. What will you discover about plays before 1800 when you look at them through the eyes of the prompter?</p>
+</div>
+
+<div id="instructions">
+There are two ways to interact with the Cyborg Prompter.
+<ul>
+	<li>
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+		EITHER select a play in XML format with TEI tags to upload from your computer:<br>
+			<br>
+			<label for="fileToUpload">SELECT XML FILE</label><input type="file" name="fileToUpload" id="fileToUpload"><br>
+			<input type="submit" value="UPLOAD" name="submit">
+			<br>
+		</form>
+	</li>
+	<li>
+		<form action="choose.php" method="POST">
+			OR choose a sample play already encoded in TEI and stored on this website:<br><br>
+			<input type="radio" name=Example value="Errors">William Shakespeare, <i>The Comedy of Errors</i>, 2017 (<a href="https://www.folgerdigitaltexts.org/download/">source</a>)<br>
+			<input type="radio" name=Example value="Malfi"> John Webster, <i>The Duchess of Malfi</i>, 1623 (<a href="https://ota.ox.ac.uk/tcp/headers/A14/A14872.html">source</a>)<br>
+			<input type="radio" name=Example value="Love"> John Dryden, <i>All for Love</i>, 1692 (<a href="https://ota.ox.ac.uk/tcp/headers/A36/A36592.html">source</a>)<br>
+			<input type="radio" name=Example value="Wonder"> Susanna Centlivre, <i>The Wonder</i>, 1714 (<a href="http://ota.ox.ac.uk/tcp/headers/K03/K032319.000.html">source</a>)<br>
+			<br>
+			<input type="submit" name="Choose XML" value ="CHOOSE"/>
+		</form>
+	</li>
+</ul>
+</p>
+</div>
+
+</div>
+
+<div id="footer">
+<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a> | Designed by James Harriman-Smith | <a href="mailto:mail@jharrimansmith.net">Feedback</a> | <a href="/faqs.html">FAQs</a>
+</div>
+</body>
+</html>

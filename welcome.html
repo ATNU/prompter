@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<div>
+<p>Welcome to the Cyborg Prompter. Please either:</p>
+<ul>
+<li>
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    Upload a play in XML format with TEI tags <div class="tooltip">[help]<span class="tooltiptext">You can download such texts on the Oxford Text Archive</span></div> from your computer:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload XML" name="submit">
+</form>
+</li>
+<li>
+<form action="choose.php" method="POST">
+    OR choose a sample play already encoded in TEI and stored on this website:<br>
+	<input type="radio" name=Example value="Errors">William Shakespeare, <i>The Comedy of Errors</i>, 2017 (<a href="https://www.folgerdigitaltexts.org/download/">source</a>)<br>
+	<input type="radio" name=Example value="Malfi"> John Webster, <i>The Duchess of Malfi</i>, 1623 (<a href="https://ota.ox.ac.uk/tcp/headers/A14/A14872.html">source</a>)<br>
+	<input type="radio" name=Example value="Love"> John Dryden, <i>All for Love</i>, 1692 (<a href="https://ota.ox.ac.uk/tcp/headers/A36/A36592.html">source</a>)<br>
+	<input type="radio" name=Example value="Wonder"> Susanna Centlivre, <i>The Wonder</i>, 1714 (<a href="http://ota.ox.ac.uk/tcp/headers/K03/K032319.000.html">source</a>)<br>
+	<input type="submit" name="Choose XML" value ="Choose XML"/>
+</form>
+</li>
+</ul>
+</p>
+</div>
+
+
+</body>
+</html>
